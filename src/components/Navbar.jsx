@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Search, ShoppingCartTwoTone} from '@mui/icons-material';
+import {Language, Search, ShoppingCartTwoTone} from '@mui/icons-material';
 import { Badge } from "@mui/material";
 
 
@@ -60,7 +60,7 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Lenguage>En</Lenguage>
+          <Language>En</Language>
           <SearchContainer>
             <Input />
             <Search style={{color:"gray", fontSize:"16px"
