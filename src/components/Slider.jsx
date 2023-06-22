@@ -44,11 +44,11 @@ const Slide = styled.div`
   background-color: #${(props) => props.bg};
 `;
 const ImgContainer = styled.div`
-  height: 100%;
+  height: 80%;
   flex: 1;
 `;
 const Image = styled.img`
-  height: 80%;
+  height: 100%;
 `;
 const InfoContainer = styled.div`
     flex:1,
