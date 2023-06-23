@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Language, Search, ShoppingCartTwoTone} from '@mui/icons-material';
+import { Search, ShoppingCartTwoTone} from '@mui/icons-material';
 import { Badge } from "@mui/material";
 
 
@@ -31,7 +31,7 @@ const Right = styled.div({
   alignItems: "center",
   justifyContent: "flex-end",
 });
-const Lenguage = styled.span({
+const Language = styled.span({
   fontSize: "14px",
   cursor: "pointer",
 });
