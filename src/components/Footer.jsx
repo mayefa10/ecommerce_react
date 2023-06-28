@@ -39,22 +39,21 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-
 `;
 
 const ListItem = styled.li`
-width: 50%;
-margin-bottom: 30px;
+  width: 50%;
+  margin-bottom: 30px;
 `;
 
 const ContactItem = styled.div`
-margin-bottom:20px;
-display: flex;
-align-items: center;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 `;
 
 const Payment = styled.img`
-width:605;
+  width: 605;
 `;
 
 const Logo = styled.h1``;
@@ -110,8 +109,8 @@ export const Footer = () => {
         <List>
           <ListItem>Home</ListItem>
           <ListItem>Cart</ListItem>
-          <ListItem>Man Games</ListItem>
-          <ListItem>Woman Games</ListItem>
+          <ListItem>Games men</ListItem>
+          <ListItem>Games women</ListItem>
           <ListItem>Accessories</ListItem>
           <ListItem>My Account</ListItem>
           <ListItem>Order Tracking</ListItem>
@@ -121,10 +120,19 @@ export const Footer = () => {
       </Center>
       <Right>
         <Title>Contact</Title>
-        <ContactItem><FmdGoodIcon style={{marginRight:"10px"}}/>calle Nortester-78-40</ContactItem>
-        <ContactItem><CallEndIcon style={{marginRight:"10px"}}/>+1 365 7890211</ContactItem>
-        <ContactItem><EmailIcon style={{marginRight:"10px"}}/>contact@jq.co</ContactItem>
-        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png"/>
+        <ContactItem>
+          <FmdGoodIcon style={{ marginRight: '10px' }} />
+          Calle Nortester-78-40
+        </ContactItem>
+        <ContactItem>
+          <CallEndIcon style={{ marginRight: '10px' }} />
+          +1 365 7890211
+        </ContactItem>
+        <ContactItem>
+          <EmailIcon style={{ marginRight: '10px' }} />
+          contact@jq.co
+        </ContactItem>
+        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
     </Container>
   );
