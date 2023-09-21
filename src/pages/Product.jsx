@@ -4,12 +4,14 @@ import Announcement from '../components/Announcement';
 import Newsletter from '../components/Newsletter';
 import { Footer } from '../components/Footer';
 import { Add, Remove } from '@mui/icons-material';
+import { mobile } from '../responsive';
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
+  ${mobile({ padding: '10px', flexDirection: 'column' })}
 `;
 
 const ImgContainer = styled.div`
@@ -20,11 +22,13 @@ const Image = styled.img`
   width: 100%;
   height: 90vh;
   object-fit: cover;
+  ${mobile({ height: '40vh' })}
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0px 50px;
+  ${mobile({ padding: '10px' })}
 `;
 
 const Title = styled.h1`
@@ -44,11 +48,14 @@ const FilterContainer = styled.div`
   margin: 30px 0px;
   display: flex;
   justify-content: space-between;
+  ${mobile({width:'100%' })}
 `;
 
 const Filter = styled.div`
 display:flex,
 align-items:center;
+
+
 `;
 
 const FilterTitle = styled.span`
@@ -56,27 +63,20 @@ const FilterTitle = styled.span`
   font-weight: 200;
 `;
 
-const FilterColor = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: ${(props) => props.color};
-  margin: 0px 5px;
-  cursor: pointer;
-`;
-
 const FilterGame = styled.select`
   margin-left: 8px;
   padding: 3px;
+  ${mobile({marginLeft:' 128px' })}
 `;
 
 const FilterGameOptions = styled.option``;
 
 const AddContainer = styled.div`
-  width: 50%;
+  width: 60%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({ width: '100%' })}
 `;
 
 const AmountContainer = styled.div`
@@ -88,25 +88,25 @@ const AmountContainer = styled.div`
 const Amount = styled.span`
   width: 30px;
   height: 30px;
-  border-radius:10px;
+  border-radius: 10px;
   border: 1px solid #0f2441;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin:0px 6px;
+  margin: 0px 6px;
 `;
 
 const Button = styled.button`
-padding:15px;
-cursor: pointer;
-border: 2px solid #0f2441;
-background-color: white;
-font-size: 16px;
+  padding: 15px;
+  cursor: pointer;
+  border: 2px solid #0f2441;
+  background-color: white;
+  font-size: 16px;
 
-&:hover{
-  background-color:#0f2441;
-  color:white;
-}
+  &:hover {
+    background-color: #0f2441;
+    color: white;
+  }
 `;
 
 const Product = () => {
@@ -128,13 +128,6 @@ const Product = () => {
           </Desc>
           <Price>$ 50</Price>
           <FilterContainer>
-            <Filter>
-              <FilterTitle>Find your favorite game</FilterTitle>
-              <FilterColor color="yellow" />
-              <FilterColor color="green" />
-              <FilterColor color="red" />
-              <FilterColor color="gray" />
-            </Filter>
             <Filter>
               <FilterTitle>Games</FilterTitle>
               <FilterGame>

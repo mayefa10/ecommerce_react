@@ -3,14 +3,17 @@ import ArrowLeftTwoToneIcon from '@mui/icons-material/ArrowLeftTwoTone';
 import ArrowRightTwoToneIcon from '@mui/icons-material/ArrowRightTwoTone';
 import { useState } from 'react';
 import { sliderItems } from '../data';
+import { mobile, table } from '../responsive';
 
-const Container = styled.div({
-  width: '100%',
-  height: '100vh',
-  display: 'flex',
-  position: 'relative',
-  overflow: 'hidden',
-});
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  ${mobile({ display: 'none'})};
+`;
+
 const Arrow = styled.div`
   width: 50px;
   height: 50px;
@@ -32,9 +35,8 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transition:all 1.5s ease;
+  transition: all 1.5s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
-
 `;
 const Slide = styled.div`
   display: flex;
@@ -44,17 +46,18 @@ const Slide = styled.div`
   background-color: #${(props) => props.bg};
 `;
 const ImgContainer = styled.div`
-  height: 80%;
+  height: 100%;
   flex: 1;
 `;
 const Image = styled.img`
-  height: 100%;
+  width:500px;
+  height: 500px;
+  object-fit: cover;
 `;
 const InfoContainer = styled.div`
-    flex:1,
-    padding:50%;
-    margin-right:12%;
-     `;
+  flex:1;
+  padding:50px;
+   `;
 const Title = styled.h1`
   font-size: 70px;
 `;
@@ -84,7 +87,7 @@ const Slider = () => {
       <Arrow direction="left" onClick={() => handleClick('left')}>
         <ArrowLeftTwoToneIcon />
       </Arrow>
-      <Wrapper slideIndex={slideIndex} >
+      <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
           <Slide bg={item.bg} key={item.id}>
             <ImgContainer>

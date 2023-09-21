@@ -16,7 +16,7 @@ const Icon = styled.div`
     margin:10px;
     transition:all 0.5s ease;
     &:hover{
-        background-color:#e9f5f5;
+        background-color:#f2f2f2;
         transform:scale(1.1);
     }
 `;
@@ -29,7 +29,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5fbfb;
+  background-color: #f2f2f2;
   position: relative;
 
   &:hover ${Icon}{

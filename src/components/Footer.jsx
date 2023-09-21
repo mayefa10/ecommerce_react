@@ -7,9 +7,11 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import CallEndIcon from '@mui/icons-material/CallEnd';
 import EmailIcon from '@mui/icons-material/Email';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -22,11 +24,13 @@ const Left = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `;
 
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ backgroundColor: "#fcf5f5" })}
 `;
 
 const Title = styled.h3`
@@ -84,10 +88,8 @@ export const Footer = () => {
       <Left>
         <Logo>Ecommerce QF</Logo>
         <Desc>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          impedit facere dolor accusantium debitis iure commodi beatae aut,
-          corrupti obcaecati praesentium qui numquam voluptate voluptatibus
-          minima recusandae dolores ut ea.
+        The world of video games at your fingertips.
+        
         </Desc>
         <SocialContainer>
           <SocialIcons color="3B5999">
