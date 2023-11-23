@@ -16,7 +16,7 @@ const Icon = styled.div`
     margin:10px;
     transition:all 0.5s ease;
     &:hover{
-        background-color:#f2f2f2;
+        background-color:#e9f5f5;
         transform:scale(1.1);
     }
 `;
@@ -56,7 +56,7 @@ const Info = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.1);
   z-index: 3;
   display: flex;
   align-items: center;

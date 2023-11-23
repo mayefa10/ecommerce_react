@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Search, ShoppingCartTwoTone } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { mobile } from '../responsive';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   height: 60px;
@@ -78,8 +79,8 @@ const Navbar = () => {
           <Logo>GameStore</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem><Link className='' to = '/register' >REGISTER</Link></MenuItem>
+          <MenuItem><Link to='/sig-in'>SIGN IN</Link></MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartTwoTone />
